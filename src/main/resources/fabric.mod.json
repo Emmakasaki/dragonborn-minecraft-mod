@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "dragonborn",
+	"version": "${version}",
+	"name": "Dragonborn Mod",
+	"description": "Adds shouting and a few items based off of the game Skyrim.",
+	"authors": [
+		"Emmaki"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/dragonborn/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"emma.dragonborn.Dragonborn"
+		],
+		"fabric-datagen": [
+			"emma.dragonborn.DragonbornDataGenerator"
+		],
+		"client": [
+			"emma.dragonborn.DragonbornModClient"
+		]
+	},
+	"mixins": [
+		"dragonborn.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
